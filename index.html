@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>W</title>
+</head>
+<style>
+	body{
+		background: green;
+		height: 5000px;
+	}
+	.wrap{
+       max-width: 60%;
+       margin: 150px auto 0;
+	}
+	.bar{
+		color: #fff;
+		letter-spacing: 1px;
+		font-weight: 500;
+		font-size: 16px;
+		position: relative;
+		display: inline-block;
+		margin-bottom: 15px;
+		width: 100%;
+	}
+	.bar span{
+		position: relative;
+		display: inline-block;
+		width: 100%;
+		height: 25px;
+		background: #fff;
+		border-radius: 30px;
+	}
+	.bar span::before{
+      position: absolute;
+      content: "";
+      top: 6px;
+      left: 5px;
+      height: 50%;
+      width: 80%;
+      background: blue;
+      border-radius: 50px;
+      animation: bar 6s ease infinite;
+      /*animation-play-state: paused;*/
+	}
+	/*.anim::before{
+		animation-play-state: runing;	
+	}*/
+	@keyframes bar{
+		from{
+			width: 0;
+		}
+	}
+	.bar:nth-child(1) span:before{
+		width: 90%;
+	}
+	.bar:nth-child(2) span:before{
+		width: 85%;
+	}
+	.bar:nth-child(3) span:before{
+		width: 75%;
+	}
+	.bar:nth-child(4) span:before{
+		width: 60%;
+	}
+	.bar:nth-child(5) span:before{
+		width: 50%;
+	}
+	.bar h3 abbr{
+		width: 50px;
+		display: inline-block;
+		height: 35px;
+		border-radius: 50px;
+		text-align: center;
+		line-height: 35px;
+		position: absolute;
+		top: 60%;
+		z-index: 1;
+		background: blue;
+		box-shadow: 0 5px 20px gray;
+		animation: abr 6s ease infinite;
+	}
+	@keyframes abr{
+		from{
+			left: -30px;
+		}
+	}
+	.bar:nth-child(1) h3 abbr{
+		left: 90%;
+	}
+	.bar:nth-child(2) h3 abbr{
+        left: 85%;
+	}
+	.bar:nth-child(3) h3 abbr{
+		left: 75%;
+	}
+	.bar:nth-child(4) h3 abbr{
+		left: 60%;
+	}
+	.bar:nth-child(5) h3 abbr{
+		left: 50%;
+	}
+</style>
+<body>
+  <div class="wrap">
+  	<div class="bar">
+  		<h3>HTML5/CSS3<abbr>90%</abbr></h3>
+  		<span></span>
+  	</div>
+  	<div class="bar">
+  		<h3>JAVASCRIPT/JQUERY<abbr>85%</abbr></h3>
+  		<span></span>
+  	</div>
+  	<div class="bar">
+  		<h3>PHP/LARAVEL<abbr>75%</abbr></h3>
+  		<span></span>
+  	</div>
+  	<div class="bar">
+  		<h3>PYTHON/DJANGO<abbr>60%</abbr></h3>
+  		<span></span>
+  	</div>
+  	<div class="bar">
+  		<h3>MYSQL<abbr>50%</abbr></h3>
+  		<span></span>
+  	</div>
+  </div>
+  <script type="text/javascript">
+  </script>
+</body>
+</html>
